@@ -1,53 +1,94 @@
-# React + TypeScript + Vite
+# 🏆 PARALYMPICDREAMS: Olympic Horizon
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Centro de alto rendimiento deportivo paralímpico de élite.
 
-Currently, two official plugins are available:
+## ✨ Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🎬 Video introductorio con animación inicial elegante
+- 📱 **100% Responsive** - Optimizado para móviles, tablets y desktop
+- 🎨 Diseño moderno con paleta de colores profesional
+- ⚡ Animaciones fluidas y transiciones suaves
+- 🚀 Despliegue automático con GitHub Actions
 
-## React Compiler
+## 🛠️ Tecnologías
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19 + TypeScript
+- Vite 7
+- CSS3 con animaciones
+- GitHub Actions para CI/CD
 
-## Expanding the ESLint configuration
+## 📦 Instalación
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+```bash
+# Instalar dependencias
+npm install
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+# Desarrollo con hot reload
+npm run dev
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+# Desarrollo con acceso desde móvil (red local)
+npm run dev
+# Accede desde: http://TU-IP-LOCAL:5173
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Build para producción
+npm run build
+
+# Preview del build
+npm run preview
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🚀 Despliegue
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
+Ver [DEPLOY.md](./DEPLOY.md) para instrucciones detalladas de despliegue en GitHub Pages.
+
+**Resumen rápido:**
+1. Sube tu código a GitHub
+2. Configura GitHub Pages con "GitHub Actions"
+3. El sitio se desplegará automáticamente en cada push
+
+## 📁 Estructura
+
+```
+ivo/
+├── src/
+│   ├── App.tsx          # Componente principal
+│   ├── App.css          # Estilos de la app
+│   ├── index.css        # Estilos globales
+│   └── main.tsx         # Entry point
+├── public/
+│   ├── INTRODUCTORIO.mp4
+│   ├── Entrenador.jpg
+│   ├── Nutricionista1.jpg
+│   └── Preparador1.jpg
+└── .github/
+    └── workflows/
+        └── deploy.yml   # CI/CD automático
+```
+
+## 🎨 Paleta de Colores
+
+- **Azul Principal**: `#1976d2`
+- **Azul Oscuro**: `#0d47a1`
+- **Gris Claro**: `#f5f5f5`
+- **Blanco**: `#ffffff`
+
+## 📱 Responsive Breakpoints
+
+- **Desktop**: > 1024px
+- **Tablet**: 768px - 1024px
+- **Móvil**: 480px - 768px
+- **Móvil pequeño**: < 480px
+
+## 👥 Equipo
+
+- Entrenador Principal
+- Preparador Físico
+- Nutricionista Deportiva
+
+---
+
+Desarrollado con ❤️ para atletas paralímpicos de élite
+
 import reactDom from 'eslint-plugin-react-dom'
 
 export default defineConfig([

@@ -193,7 +193,7 @@ function App() {
                 <a href="#privacy">Políticas de Privacidad</a>
                 <a href="#contact">Contacto</a>
               </div>
-              <p className="footer-copyright">© 2026 PARALYMPICDREAMS: Olympic Horizon. Todos los derechos reservados.</p>
+              <p className="footer-copyright">© 2026 PARALYMPICDREAMS: Olympic Horizon. Todos los derechos reservados</p>
             </div>
           </footer>
         </>

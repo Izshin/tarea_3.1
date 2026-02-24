@@ -19,6 +19,9 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./ivo  # Esto le dice que ejecute todo dentro de 'ivo'
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -27,7 +30,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          # Hemos quitado 'cache: npm' para evitar el error del lockfile
+          # Eliminamos cache: npm para evitar el error del lockfile
 
       - name: Install dependencies
         run: npm install
@@ -41,8 +44,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Asegúrate de que tu build genera la carpeta 'dist'
-          path: './dist'
+          # Aquí también indicamos que la carpeta dist está dentro de ivo
+          path: './ivo/dist'
 
   deploy:
     environment:
